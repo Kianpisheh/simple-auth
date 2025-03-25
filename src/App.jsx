@@ -12,7 +12,7 @@ function App() {
     const login = async (username, password) => {
         try {
             const res = await fetch(
-                "https://angelic-gentleness.railway.app/login",
+                "https://node-login-b76p.onrender.com/login",
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -32,9 +32,12 @@ function App() {
 
     // Register function to create a new user
     const register = async (username, password) => {
+        console.log(username);
+        console.log(password);
+
         try {
             const res = await fetch(
-                "https://angelic-gentleness.railway.app/register",
+                "http://node-login-b76p.onrender.com/register",
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
