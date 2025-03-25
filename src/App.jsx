@@ -12,7 +12,7 @@ function App() {
     const login = async (username, password) => {
         try {
             const res = await fetch(
-                "https://angelic-gentleness.railway.app/login",
+                "https://node-login-b76p.onrender.com/login",
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -37,7 +37,7 @@ function App() {
 
         try {
             const res = await fetch(
-                "https://angelic-gentleness.railway.app/register",
+                "https://node-login-b76p.onrender.com/register",
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -54,7 +54,7 @@ function App() {
 
     // Logout function to clear the user
     const logout = async () => {
-        await fetch("https://angelic-gentleness.railway.app/logout", {
+        await fetch("https://node-login-b76p.onrender.com/logout", {
             method: "POST",
             credentials: "include", // Send cookies with the request
         });
