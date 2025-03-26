@@ -20,6 +20,7 @@ function App() {
         try {
             const res = await fetch(
                 "https://nodelogin-production.up.railway.app/login",
+                // "http://localhost:5000/login",
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -42,6 +43,7 @@ function App() {
         try {
             const res = await fetch(
                 "https://nodelogin-production.up.railway.app/register",
+                // "http://localhost:5000/register",
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -59,10 +61,14 @@ function App() {
 
     // Logout function to clear the user
     const logout = async () => {
-        await fetch("https://nodelogin-production.up.railway.app/logout", {
-            method: "POST",
-            credentials: "include", // Send cookies with the request
-        });
+        await fetch(
+            "https://nodelogin-production.up.railway.app/logout",
+            // "http://localhost:5000/logout",
+            {
+                method: "POST",
+                credentials: "include", // Send cookies with the request
+            }
+        );
         setUser(null);
     };
     return (
