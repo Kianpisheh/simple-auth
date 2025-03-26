@@ -5,7 +5,7 @@ function Home(props) {
     const { user } = props;
     return (
         <div className="home-main">
-            <h2>Welcome {user ? user.username : ""}!!</h2>
+            <h2>Welcome {user ? user.username : ""}!</h2>
             <div>
                 {!user ? (
                     <ul>
