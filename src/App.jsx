@@ -33,6 +33,7 @@ function App() {
 
             const data = await res.json();
             setUser(data.user); // Set logged-in user data
+            navigate("/");
         } catch (error) {
             console.error("Error logging in:", error);
         }
