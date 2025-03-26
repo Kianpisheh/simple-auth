@@ -1,5 +1,11 @@
 import "./App.css";
-import { Routes, Route, Link, BrowserRouter as Router } from "react-router-dom";
+import {
+    Routes,
+    Route,
+    Link,
+    BrowserRouter as Router,
+    useNavigate,
+} from "react-router-dom";
 import Register from "./Register";
 import Login from "./Login";
 import Home from "./Home";
@@ -7,6 +13,7 @@ import React, { useState } from "react";
 
 function App() {
     const [user, setUser] = useState(null); // Store logged-in user
+    const navigate = useNavigate();
 
     // Login function to authenticate user
     const login = async (username, password) => {
@@ -43,7 +50,8 @@ function App() {
             );
 
             if (!res.ok) throw new Error("Registration failed");
-            alert("Registration successful! Please log in.");
+            // alert("Registration successful! Please log in.");
+            navigate("/login");
         } catch (error) {
             console.error("Error registering:", error);
         }
