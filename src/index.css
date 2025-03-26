@@ -1,0 +1,10 @@
+#root {
+    height: 100%;
+}
+
+html,
+body {
+    background: #ede8f4;
+    height: 100%;
+    margin: 0; /* Remove any default margin */
+}

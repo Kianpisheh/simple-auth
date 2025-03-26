@@ -1,0 +1,18 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.main-container form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-container h2 {
+    font-size: 20px;
+    text-align: center;
+}

@@ -32,9 +32,6 @@ function App() {
 
     // Register function to create a new user
     const register = async (username, password) => {
-        console.log(username);
-        console.log(password);
-
         try {
             const res = await fetch(
                 "https://nodelogin-production.up.railway.app/register",
@@ -61,34 +58,9 @@ function App() {
         setUser(null);
     };
     return (
-        <div>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    {user ? (
-                        <>
-                            <li>
-                                <button onClick={logout}>Logout</button>
-                            </li>
-                        </>
-                    ) : (
-                        <>
-                            <li>
-                                <Link to="/login">Login</Link>
-                            </li>
-                            <li>
-                                <Link to="/register">Register</Link>
-                            </li>
-                        </>
-                    )}
-                </ul>
-            </nav>
-
+        <div className="main-container">
             <Routes>
                 <Route path="/" element={<Home />} />
-
                 <Route path="/login" element={<Login onLogin={login} />} />
                 <Route
                     path="/register"
